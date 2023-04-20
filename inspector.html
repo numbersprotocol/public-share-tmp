@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eye Icon Button Widget</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<style>
+  .widget-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .info-button {
+    background-color: #00C9FF;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .info-text {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 500px;
+    padding: 15px;
+    background-color: #808080;
+    color: #000;
+    text-align: left;
+    font-size: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+
+  .info-text p {
+    margin: 5px 0;
+  }
+
+  .view-details-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #00C9FF;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="widget-container">
+  <button class="info-button" onclick="toggleInfoText()"><i class="fas fa-eye"></i></button>
+  <div class="info-text" id="infoText">
+    <p>Asset ID:<a href="https://ipfs-pin.numbersprotocol.io/ipfs/bafybeifqkyqqyosukrfzdrwgjcuubpsyd4s25zzph3amwahukzwsc5firq"> bafybeifqkyqqyosukrfzdrwgjcuubpsyd4s25zzph3amwahukzwsc5firq</a></p>
+    <p>Creator: Aphone220908</p>
+    <p>Registration Time: 2022-06-23T06:41:09.207720Z</p>
+    <button class="view-details-button" onclick="window.open('https://nftsearch.site/asset-profile?mid=bafybeifqkyqqyosukrfzdrwgjcuubpsyd4s25zzph3amwahukzwsc5firq', '_blank')">Request License</button>
+  </div>
+</div>
+
+<script>
+  function toggleInfoText() {
+    var infoText = document.getElementById("infoText");
+    if (infoText.style.display === "none") {
+      infoText.style.display = "block";
+    } else {
+      infoText.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>
+
